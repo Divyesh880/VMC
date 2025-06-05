@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon" />
+  <title>Vadodara Municipal Corporation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+   
+  <!-- Bootstrap Links -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Custum CSS -->
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<div class="main_container">
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar_logo">
+                <a href="#">
+                    <img src="assets/images/logo.jpg" alt="Logo" title="Logo">
+                </a>
+            </div>
+            <div style="padding: 0 15px;">
+                <a href="#" class="sidebsr_link"><img src="assets/images/sidebar_icons/1.png" alt="Home" title="Home" class="icon_width"> Home</a>
+                <a href="#" class="sidebsr_link"><img src="assets/images/sidebar_icons/2.png" alt="Home" title="Home" class="icon_width"> Register Complaint</a>
+                <a href="#" class="sidebsr_link"><img src="assets/images/sidebar_icons/3.png" alt="Home" title="Home" class="icon_width"> View Complaint Status</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="top_header">
+            <button class="toggle-btn" id="toggleBtn" onclick="toggleSidebar()">☰</button>
+            <a class="navbar-brand" href="#">Vadodara Municipal Corporation</a>
+        </div>
+        <div class="main_content">
+            <div>
+                <h1 class="main_title">Register Complaint</h1>
+                <p class="text_instruction">Enter your complaint and your Contact Information. (Fields marked with <span class="red_text">‘*’</span> are mandatory). Complaints Are Auto Assigned To The Concern Officers On Complaint Category, Complaint Code And Ward. Please Select Them Properly. કંપ્લેઇન્ટ કેટેગરી અને વોર્ડના આધારે કંપ્લેઇન્ટ ઓટો એસાઇન થાય છે તેથી તેમનું યોગ્ય સિલેક્શન કરશો..</p>
+            </div>
+            <div class="form_box">
+                <form action="">
+
+                    <div>
+                        <h4 class="form_title">Personal Information</h4>
+                        <div class="form_box_inner">
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="fullname">Full Name <span class="red_text"> *</span></label>
+                                    <input type="text" name="fullname" id="fullname" placeholder="Full Name" class="form_textbox">
+                                </div>
+                                <div class="field_box">
+                                    <label for="landline">Landline Number </label>
+                                    <input type="text" name="landline" id="landline" placeholder="Landline Number" class="form_textbox">
+                                </div>
+                            </div>
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="mobile ">Mobile <span class="red_text"> *</span></label>
+                                    <input type="text" name="mobile" id="mobile" placeholder="Mobile" class="form_textbox">
+                                </div>
+                                <div class="field_box">
+                                    <label for="email">Email </label>
+                                    <input type="text" name="email" id="email" placeholder="Email" class="form_textbox">
+                                </div>
+                            </div>
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="address ">Address <span class="red_text"> *</span></label>
+                                    <textarea name="address" id="address" rows="3" placeholder="Address" class="form_textarea"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="census">Property Census # </label>
+                                    <input type="text" name="census" id="census" placeholder="Census" class="form_textbox">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="form_title">Complaint Information</h4>
+                        <div class="form_box_inner">
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="ward">Ward <span class="red_text"> *</span></label>
+                                    <select name="ward" id="ward" class="form_textbox">
+                                        <option value="" selected>--Select--</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="field_box">
+                                    <label for="area">Area<span class="red_text"> *</span></label>
+                                    <select name="area" id="area" class="form_textbox">
+                                        <option value="" selected>--Select--</option>
+                                        <option value="75999">38 Avenue</option>
+                                        <option value="76051">7 Sky Flats</option>
+                                        <option value="78204">A G Chambaers</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="election ">Election Ward</label>
+                                    <input type="text" name="election" id="election" placeholder="Election Ward" class="form_textbox" disabled>
+                                </div>
+                                <div class="field_box">
+                                    <label for="department">Department </label>
+                                    <input type="text" name="department" id="department" placeholder="Department" class="form_textbox" disabled>
+                                </div>
+                            </div>
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="complaint_category">Complaint Category <span class="red_text"> *</span></label>
+                                    <select name="complaint_category" id="complaint_category" class="form_textbox">
+                                        <option value="2" selected>( પાણી પુરવઠો )  Water Supply</option>
+                                        <option value="38">  ( ટ્રાફિક સિગ્નલ )  Traffic Signal</option>
+                                        <option value="39">  ( સ્વિમિંગ પુલ )  Swimming Pool</option>
+                                        <option value="4">  ( સ્ટ્રીટ લાઈટ )  Street Light</option>
+                                        <option value="30">  ( રખડતા કુતરા )  Stray Dog Sterilization and ARV</option>
+                                        <option value="26">  ( રખડતા ઢોર  )  Stray Cattle</option>
+                                        <option value="18">  ( વરસાદી ગટર પ્રોજેક્ટ  )  Storm Water Drainage Project</option>
+                                        <option value="21">  ( રોડ પ્રોજેક્ટ_નવીન ૧૮ મીટર ઉપર )  Road Project_NEW ABOVE 18 METER</option>
+                                        <option value="3">  ( રસ્તા અને ફૂટપાથ   )  Road and Footpath</option>
+                                        <option value="36">  ( વડોદરા સ્માર્ટ સીટી લગત ફરીયાદ )  Regarding Vadodara Smart City</option>
+                                        <option value="42">  ( QRT )  QRT</option>
+                                        <option value="9">  ( જાહેર સૌચાલઈ  )  Public Toilet</option>
+                                        <option value="10">  ( જાહેર આરોગ્ય )  Public Health</option>
+                                        <option value="22">  ( પાર્ક અને ગાર્ડેન )  Parks_And_Garden</option>
+                                        <option value="31">  ( જાહેરમાં શૌચાલય )  Open Defecation</option>
+                                        <option value="49">  ( વરસાદને લગતી  ફરિયાદો )  Monsoon Complaints</option>
+                                        <option value="28">  ( મોલ પાર્કિંગ ફી ને લગતી  )  Mall Parking Fee Related</option>
+                                        <option value="17">  ( હોસ્પિટલ અને દવાખાના  )  Hospital And Dispensary</option>
+                                        <option value="23">  ( ગુજરાત ગ્રામ્ય શહેરી હાઉસિંગ સ્કીમ  )  Gujarat Rural Urban Housing Scheme</option>
+                                        <option value="37">  ( ગેસ લાઈન )  Gas Line</option>
+                                        <option value="8">  ( કચરો અને સફાઈ  )  Garbage And Cleanliness</option>
+                                        <option value="46">  ( એનક્રોચમેન્ટ(દબાણ) )  ENCROACHMENT</option>
+                                        <option value="45">  ( ઈમરજેંસી )  Emergency</option>
+                                        <option value="24">  ( ઈ વેસ્ટ  )  E Waste</option>
+                                        <option value="19">  ( ગટર પ્રોજેક્ટ  )  Drainage Project</option>
+                                        <option value="1">  ( ગટર અને વરસાદી ગટર  )  Drainage And Storm Drain</option>
+                                        <option value="27">  ( કચરા ગાડી વિષે ની ફરીયાદ )  Door To Door Garbage Collection</option>
+                                        <option value="5">  ( મરેલા જાનવર  )  Dead Animals</option>
+                                        <option value="48">  ( સિટી બસ સર્વિસીસ )  City Bus Services</option>
+                                        <option value="11">  ( જન્મ અને મરણ )  Birth And Death</option>
+                                        <option value="41">  ( ઓડિટોરિયમ )  Auditorium</option>
+                                        <option value="40">  ( અતિથિ ગૃહ )  Atithi Gruh</option>
+                                        <option value="47">  ( અસેસમેન્ટ_ટેક્સ_રિબેટ )  Assessment_Tax_Rebate</option>
+                                        <option value="34">  ( આરોગ્યમ )  Arogyam</option>
+                                        <option value="44">  ( હવાની ગુણવત્તા વ્યવસ્થાપન )  Air Quality Mgt</option>
+                                    </select>
+                                </div>
+                                <div class="field_box">
+                                    <label for="complaint_type">Complaint Type<span class="red_text"> *</span></label>
+                                    <select name="complaint_type" id="complaint_type" class="form_textbox">
+                                        <option value="( પસંદ કરો )  -- Select --" selected>( પસંદ કરો )  -- Select --</option>
+                                        <option value="19">  ( અશુદ્ધ, ક્ન્ટામિનેટેડ પાણી  )  Contaminated Water(Impure)</option>
+                                        <option value="172">  ( ડાયરેક્ટ મોટર ચલાવવી )  Direct Motor Running</option>
+                                        <option value="173">  ( ગેરકાયદેસર જોડાણ )  Illegal Connection</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="describe_complaint ">Describe Complaint <span class="red_text"> *</span></label>
+                                    <textarea name="describe_complaint" id="describe_complaint" rows="3" placeholder="Describe Complaint" class="form_textarea"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field_row">
+                                <div class="field_box">
+                                    <label for="images" class="custom-upload-box" id="dropArea">
+                                    📁 Click or Drag & Drop to Upload Up to 5 Images
+                                    </label>
+                                    <input type="file" name="images" id="images" class="form_textbox" multiple style="display: none;">
+                                    <ul id="filePreview" class="file-preview"></ul>
+                                </div>
+                            </div>
+
+                            <div class="btn_box">
+                                <input type="submit" value="Submit" class="form_btn">
+                                <input type="reset" id="resetBtn" value="Reset" class="form_btn">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script> // Drag and Drop image and filePreview name
+    const f=document.getElementById('images'),p=document.getElementById('filePreview'),d=document.getElementById('dropArea');
+    const h=files=>{p.innerHTML='';if(files.length>5){alert('You can only select up to 5 files.');f.value='';return;}for(const file of files)p.appendChild(Object.assign(document.createElement('li'),{textContent:file.name}))};
+    f.addEventListener('change',()=>h(f.files));
+    d.addEventListener('dragover',e=>{e.preventDefault();d.style.backgroundColor='#eef7ff';d.style.borderColor='#1f77d0'});
+    d.addEventListener('dragleave',()=>{d.style.backgroundColor='';d.style.borderColor=''});
+    d.addEventListener('drop',e=>{e.preventDefault();d.style.backgroundColor='';d.style.borderColor='';f.files=e.dataTransfer.files;h(e.dataTransfer.files)});
+</script>
+
+<script> // Clear filePreview
+    const fileInput = document.getElementById('images');
+    const filePreview = document.getElementById('filePreview');
+    const resetBtn = document.getElementById('resetBtn');
+    resetBtn.addEventListener('click', () => {
+        fileInput.value = '';
+        filePreview.innerHTML = '';
+    });
+</script>
+
+<script> // Toggle Sidebar Open And Close With Different Screen
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    function toggleSidebar() {
+        const isMobile = window.innerWidth <= 768;
+        const toggleBtn = document.getElementById("toggleBtn");
+        if (isMobile) {
+            const isVisible = sidebar.classList.toggle("visible");
+            overlay.classList.toggle("active");
+            toggleBtn.textContent = isVisible ? "✖" : "☰";
+        } else {
+            const isCollapsed = sidebar.classList.toggle("hidden");
+            document.body.classList.toggle("sidebar-collapsed");
+            toggleBtn.textContent = isCollapsed ? "☰" : "✖";
+        }
+    }
+
+    function setInitialSidebarState() {
+        const toggleBtn = document.getElementById("toggleBtn");
+        if (window.innerWidth <= 768) {
+            sidebar.classList.remove("hidden");
+            sidebar.classList.remove("visible");
+            overlay.classList.remove("active");
+            document.body.classList.remove("sidebar-collapsed");
+            toggleBtn.textContent = "☰";
+        } else {
+            sidebar.classList.remove("hidden");
+            sidebar.classList.remove("visible");
+            overlay.classList.remove("active");
+            document.body.classList.remove("sidebar-collapsed");
+            toggleBtn.textContent = "✖";
+        }
+    }
+
+    window.addEventListener("DOMContentLoaded", setInitialSidebarState);
+    window.addEventListener("resize", setInitialSidebarState);
+</script>
+
+</body>
+</html>
