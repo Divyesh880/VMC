@@ -1,0 +1,100 @@
+.main_container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.sidebar_logo {
+  padding: 11px 0;
+  text-align: center;
+  border-bottom: 1px solid #ffffff5e;
+}
+.sidebar {
+  width: 260px;
+  background-image: linear-gradient(to bottom, #1f77d0d9, #2530d9c4), url(../../assets/images/sidebar-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  transform: translateX(0);
+  overflow-y: auto;
+}
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#00000017, #9a9a9a1c);
+  z-index: 1;
+}
+.sidebar-content {
+  position: relative;
+  padding: 4px 0;
+  z-index: 2;
+  color: #fff;
+}
+.sidebar-content h2 { font-size: 24px; margin-bottom: 30px; }
+.sidebar-content .sidebsr_link {
+  display: flex;
+  margin: 13px 0;
+  padding: 13px 10px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+  align-items: center;
+}
+.sidebar-content .sidebsr_link:hover { background: #ffffff24; }
+.content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  margin-left: 260px; /* Default margin for desktop */
+  overflow-y: auto;
+}
+.toggle-btn {
+  position: relative;
+  background-color: #d4e4ff;
+  color: #384eb3;
+  border: 0;
+  padding: 4px 10px;
+  font-size: 23px;
+  border-radius: 6px;
+  z-index: 9;
+  cursor: pointer;
+  transition: .5s;
+  display: none;
+}
+.toggle-btn:hover { background-color: #8bb6ff; }
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0000002e;
+  z-index: 9;
+}
+.overlay.active { display: block; }
+
+/* Sidebar hidden (desktop toggle) */
+.sidebar.hidden { transform: translateX(-100%); }
+.icon_width { width: 26px; margin-right: 10px; }
+
+/* Desktop: move content margin-left when sidebar collapsed */
+@media (min-width: 769px) {
+  body.sidebar-collapsed .content { margin-left: 0; }
+}
+
+/* Mobile view: sidebar hidden by default */
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.visible { transform: translateX(0); }
+  .content { margin-left: 0; }
+  .toggle-btn { position: absolute; display: block; right: 10px; }
+}

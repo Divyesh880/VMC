@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {text-decoration: none;}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f7f8;
+  overflow-x: hidden;
+}
+.top_header {
+    background-color: #fff;
+    padding: 0 25px;
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar-brand {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 33px;
+    color: #3e4095;
+}
+.main_content { padding: 25px 25px; }
+.main_title {
+    color: #13995d;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+}
+.text_instruction {
+    text-align: justify;
+    font-weight: 300;
+    padding: 15px 0 25px;
+}
+.red_text { color: red; font-weight: 600; }
+.form_box {
+    background-color: #fff;
+    padding: 0 30px 32px;
+    border: 1px solid #e1e1e1;
+    border-radius: 15px;
+}
+.form_title {
+    color: #333333;
+    font-weight: 400;
+    border-bottom: 1px solid gainsboro;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 30px 1px 6px;
+}
+.form_box_inner {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.field_row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.field_box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.field_box label {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.form_textbox {
+    padding: 0 10px;
+    height: 42px;
+    border: 1px solid #c5c5c5;
+    border-radius: 7px;
+    max-width: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.form_textarea {
+    padding: 10px 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 7px;
+}
+.btn_box {
+    padding: 30px 0 0;
+    border-top: 1px solid #c5c5c5;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.form_btn {
+    background-color: #3d4095;
+    color: #FFFFFF;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 15px;
+    transition: .5s;
+}
+.form_btn:hover {
+    background-color: #42d0ed;
+    color: #3d4095;
+    border: 2px solid #3d4095;
+}
+.custom-upload-box {
+    display: block;
+    padding: 20px;
+    margin: 10px 0 7px;
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    text-align: center;
+    color: #555;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background 0.3s, border-color 0.3s;
+}
+.custom-upload-box:hover { background-color: #f0f8ff; border-color: #1f77d0; }
+.file-preview {
+    list-style: none;
+    padding-left: 0;
+    color: #333;
+    font-size: 14px;
+}
+.file-preview li { margin-bottom: 5px; }
+@media (width: 768px) {
+    .navbar-brand { font-size: 4.25vw !important; }
+}
+@media (min-width: 769px) and (max-width: 815px) {
+    .navbar-brand { font-size: 30px; }
+}
+@media (max-width: 768px) {
+    .navbar-brand { font-size: 5.25vw; }
+    .top_header { padding: 0 10px; position: fixed; width: 100%; }
+    .field_row { flex-wrap: wrap; }
+    .main_title { font-size: 30px; }
+    .main_content { padding: 75px 10px 20px; }
+    .form_box { padding: 0 10px 32px; }
+}
+
+/* Mobile CSS Start */
+.mob_header_bg {
+    background-color: #034cce;
+    padding: 12px 15px 0;
+}
+.mob_header {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.mob_logo {
+    width: 50px;
+    height: 50px;
+}
+.mob_logo img {
+    width: 100%;
+}
+.site_title {
+    color: #fff;
+    font-size: 14px;
+    padding-left: 12px;
+    font-weight: 600;
+}
+.title_box {
+    background-color: #034cce;
+    position: relative;
+    padding: 5px 0 12px;
+}
+.page_title {
+    text-align: center;
+}
+.page_title span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.filter {
+    filter: invert(1);
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+.border_box {
+    padding: 10px;
+    border: 2px solid #034cce;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.comp_title {
+    color: #034cce;
+    font-size: 16px;
+}
+.status_drop {
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    padding: 2px 3px;
+}
+.comment_box {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.site_btn_width {
+    background-color: #034cce;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 0;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+}
+.site_btn_width:hover {
+    background-color: #053b97;
+}
+.site_btn {
+    background-color: #034cce;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+.site_btn:hover {
+    background-color: #053b97;
+}
+.site_btn_2 {
+    background-color: #034cce;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 15px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+.site_btn_2:hover {
+    background-color: #053b97;
+}
+.bg_header {
+    background-color: #034cce;
+    color: #fff;
+    padding: 20px 15px;
+}
+.only_heading {
+    text-align: center;
+    position: relative;
+}
+.go_back {
+    position: absolute;
+    font-size: 22px;
+    left: 0;
+    top: 4px;
+    color: #fff;
+}
+.only_heading span {
+    font-size: 20px;
+}
+.light_border_box {
+    border: 2px solid #b0b0b0;
+}
+.text_black { color: #000; }
+.site_textbox {
+    border: 1px solid #000;
+    padding: 8px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.name_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 20px 30px;
+}
+.radio_btn { height: 20px; width: 20px; }
+.date_box {
+    border: 1px solid #acacac;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+        background-color: #0f51b1;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+/* Mobile CSS End */
