@@ -114,7 +114,7 @@ body {
 .custom-upload-box {
     display: block;
     padding: 20px;
-    margin: 10px 0 7px;
+    margin: 10px 0 5px;
     border: 2px dashed #aaa;
     border-radius: 8px;
     text-align: center;
@@ -131,20 +131,6 @@ body {
     font-size: 14px;
 }
 .file-preview li { margin-bottom: 5px; }
-@media (width: 768px) {
-    .navbar-brand { font-size: 4.25vw !important; }
-}
-@media (min-width: 769px) and (max-width: 815px) {
-    .navbar-brand { font-size: 30px; }
-}
-@media (max-width: 768px) {
-    .navbar-brand { font-size: 5.25vw; }
-    .top_header { padding: 0 10px; position: fixed; width: 100%; }
-    .field_row { flex-wrap: wrap; }
-    .main_title { font-size: 30px; }
-    .main_content { padding: 75px 10px 20px; }
-    .form_box { padding: 0 10px 32px; }
-}
 
 /* Mobile CSS Start */
 .mob_header_bg {
@@ -165,7 +151,6 @@ body {
 }
 .site_title {
     color: #fff;
-    font-size: 14px;
     padding-left: 12px;
     font-weight: 600;
 }
@@ -214,7 +199,7 @@ body {
     background-color: #034cce;
     color: #fff;
     text-decoration: none;
-    padding: 6px 0;
+    padding: 8px 0;
     border-radius: 5px;
     min-width: 100px;
     text-align: center;
@@ -274,7 +259,7 @@ body {
 }
 .text_black { color: #000; }
 .site_textbox {
-    border: 1px solid #000;
+    border: 1px solid #bebebe;
     padding: 8px 10px;
     border-radius: 5px;
     width: 100%;
@@ -286,7 +271,7 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     border-bottom: 1px solid #c8c8c8;
-    padding: 20px 30px;
+    padding: 15px 30px;
 }
 .radio_btn { height: 20px; width: 20px; }
 .date_box {
@@ -337,3 +322,21 @@ body {
       transform: translateX(26px);
     }
 /* Mobile CSS End */
+
+@media (width: 768px) {
+    .navbar-brand { font-size: 4.25vw !important; }
+}
+@media (max-width: 500px) {
+    .site_title { font-size: 4.5vw; }
+}
+@media (max-width: 768px) {
+    .navbar-brand { font-size: 5.25vw; }
+    .top_header { padding: 0 10px; position: fixed; width: 100%; }
+    .field_row { flex-wrap: wrap; }
+    .main_title { font-size: 30px; }
+    .main_content { padding: 75px 10px 20px; }
+    .form_box { padding: 0 10px 32px; }
+}
+@media (min-width: 769px) and (max-width: 815px) {
+    .navbar-brand { font-size: 30px; }
+}
