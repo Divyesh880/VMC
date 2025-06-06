@@ -18,6 +18,7 @@
 
     <!-- Chart JS Links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 
     <!-- Custum CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -66,10 +67,11 @@
         </div>
     </div>
 
+
 <script> 
     const xValues = ["Area A", "Area B", "Area C", "Area D", "Area E"];
     const yValues = [23, 95, 140, 78, 32];
-    const barColors = ["#0f51b1", "#0f51b1","#0f51b1","#0f51b1","#0f51b1"];
+    const barColors = ["#0f51b1", "#0f51b1", "#0f51b1", "#0f51b1", "#0f51b1"];
 
     new Chart("myChart", {
         type: "bar",
@@ -81,6 +83,17 @@
             }]
         },
         options: {
+            plugins: {
+                datalabels: {
+                    color: 'white',
+                    anchor: 'end',
+                    align: 'start',
+                    font: {
+                        weight: 'bold',
+                        size: 12
+                    }
+                }
+            },
             legend: { display: false },
             title: {
                 display: true,
@@ -105,7 +118,8 @@
                     }
                 }]
             }
-        }
+        },
+        plugins: [Chart.plugins.getAll().find(p => p.id === 'datalabels')]
     });
 </script>
 
