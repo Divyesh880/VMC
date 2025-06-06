@@ -179,7 +179,7 @@ body {
     padding: 10px;
     border: 2px solid #034cce;
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .comp_title {
     color: #034cce;
@@ -337,6 +337,7 @@ body {
     .main_title { font-size: 30px; }
     .main_content { padding: 75px 10px 20px; }
     .form_box { padding: 0 10px 32px; }
+    .border_box { width: 100%;}
 }
 @media (min-width: 769px) and (max-width: 815px) {
     .navbar-brand { font-size: 30px; }
