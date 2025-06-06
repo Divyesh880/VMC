@@ -66,35 +66,46 @@
         </div>
     </div>
 
-<script>
+<script> 
     const xValues = ["Area A", "Area B", "Area C", "Area D", "Area E"];
     const yValues = [23, 95, 140, 78, 32];
     const barColors = ["#0f51b1", "#0f51b1","#0f51b1","#0f51b1","#0f51b1"];
 
     new Chart("myChart", {
-    type: "bar",
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-    },
-    options: {
-        legend: {display: false},
-        scales: {
-        yAxes: [{
-            ticks: {
-            beginAtZero: true
-            }
-        }]
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
         },
-
-        title: {
-        display: true,
-        text: "Number of Complaints with Area"
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: ""
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Number of Complaints',
+                        fontStyle: 'bold'
+                    }
+                }],
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Area',
+                        fontStyle: 'bold'
+                    }
+                }]
+            }
         }
-    }
     });
 </script>
 
